@@ -1,0 +1,60 @@
+section.hero.homePage {
+    background: url("/static/earth.png") right no-repeat;
+    background-size: cover;
+}
+
+section.hero.homePage .title {
+    font-size: 7rem;
+    color: #c00b36;
+    font-weight: 800;
+}
+
+section.hero.homePage .subtitle {
+    font-size: 3rem;
+}
+
+#corona-info {
+    margin: auto;
+    width: 85vw;
+}
+
+.box {
+    transition: ease .40s;
+}
+
+.box:hover {
+    transform: scale(1.035);
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.icon.icon-symptom {
+    border-radius: 99999px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.icon.icon-symptom-small {
+    border-radius: 99999px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 769px) {
+    section.hero.homePage .title {
+        font-size: 3rem;
+    }
+    section.hero.homePage .subtitle {
+        font-size: 1.25rem;
+    }
+    .hero-body {
+        padding: 6rem 1.5rem;
+    }
+    section.hero.homePage {
+        background: url("/static/index/hero-bg.png") right no-repeat;
+        background-size: 70rem;
+    }
+}

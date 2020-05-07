@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COVID-19, summarised.</title>
+    <link rel="stylesheet" href="/vendor/bulma/bulma.css">
+    <link rel="stylesheet" href="/vendor/dylankok/all.css">
+    <link rel="stylesheet" href="/vendor/dylankok/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/bulma/navbar.js"></script>
+    <script defer src="/vendor/dylankok/index.js"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-active" href="/">
+                        Home
+                    </a>
+
+                    <a class="navbar-item" href="/timeline.html">
+                        Timeline
+                    </a>
+
+                    <a class="navbar-item" href="/symptomschecker.html">
+                        Symptom Checker
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+                                World Health Organisation
+                            </a>
+                            <a class="navbar-item" target="_blank" href="https://twitter.com/hashtag/COVID19">
+                                <i class="fab fa-twitter"></i>&ensp;#COVID19
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <div class="totalcounter">
+                                <p>There are <strong id="numberOfCases">...</strong> cases in the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-medium is-large homePage has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    COVID-19
+                </h1>
+                <h2 class="subtitle">
+                    Summarised.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div id="corona-info" class="columns is-vcentered is-variable is-5">
+                <div class="column is-one-third">
+                    <figure class="image">
+                        <img src="/static/coronavirus-strand.jpg">
+                    </figure>
+                </div>
+                <div class="column">
+                    <h1 class="title"><i class="fas fa-virus"></i>&ensp;The COVID-19 Coronavirus</h1>
+                    <p>The <strong>Coronavirus</strong>, also know as <strong>COVID-19</strong>, is a highly infectious
+                        virus that is spread through the air.</p>
+                    <p>People who fall sick will commonly experience <strong>mild symptoms similar to that of cough and
+                            flu.</strong></p>
+                    <br>
+                    <a class="button" href="https://en.wikipedia.org/wiki/COVID-19_pandemic">More information
+                        (Wikipedia)&ensp;<i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section has-background-light">
+        <div class="container">
+            <h1 class="title has-text-centered"><i class="fas fa-stethoscope"></i>&ensp;Symptoms</h1>
+
+            <h2 class="title has-text-centered is-4">Common</h2>
+            <div class="columns is-vcentered is-variable is-5">
+                <div class="column">
+                    <div class="box has-text-centered has-background-danger">
+                        <div class="icon icon-symptom">
+                            <i class="fas fa-temperature-high fa-3x"></i>
+                        </div>
+                        <p class="has-text-white title is-4">Fever</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered has-background-danger">
+                        <div class="icon icon-symptom">
+                            <i class="fas fa-bed fa-3x"></i>
+                        </div>
+                        <p class="has-text-white title is-4">Tiredness</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered has-background-danger">
+                        <div class="icon icon-symptom">
+                            <i class="fas fa-head-side-cough fa-3x"></i>
+                        </div>
+                        <p class="has-text-white title is-4">Dry Cough</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="title has-text-centered is-5">Others</h2>
+            <div class="columns is-vcentered is-variable is-4">
+                <div class="column">
+                    <div class="box has-text-centered has-background-dark">
+                        <div class="icon icon-symptom-small">
+                            <i class="fas fa-hand-holding-medical fa-1x"></i>
+                        </div>
+                        <p class="has-text-white">Aches & Pains</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered has-background-dark">
+                        <div class="icon icon-symptom-small">
+                            <i class="fas fa-box-tissue fa-1x"></i>
+                        </div>
+                        <p class="has-text-white">Runny Nose</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered has-background-dark">
+                        <div class="icon icon-symptom-small">
+                            <i class="fas fa-tint fa-1x"></i>
+                        </div>
+                        <p class="has-text-white">Flu/Nasal Congestion</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered has-background-dark">
+                        <div class="icon icon-symptom-small">
+                            <i class="fas fa-surprise fa-1x"></i>
+                        </div>
+                        <p class="has-text-white">Sore throat</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered has-background-dark">
+                        <div class="icon icon-symptom-small">
+                            <i class="fas fa-poop fa-1x"></i>
+                        </div>
+                        <p class="has-text-white">Diarrhoea</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered has-background-dark">
+                        <div class="icon icon-symptom-small">
+                            <i class="fas fa-drumstick-bite fa-1x"></i>
+                        </div>
+                        <p class="has-text-white">Loss of Taste/Smell</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-black">
+        <div class="container">
+            <p class="has-text-white">Made with <i class="fas fa-heart has-text-danger"></i> by <a class="has-text-light" target="_blank" href="https://kakumei.naka.to/">Dylan Kok</a>.</p>
+            <p class="has-text-grey-light">Not affliated with World Health Organisation.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
