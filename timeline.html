@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timeline of Events - COVID-19, summarised.</title>
+    <link rel="stylesheet" href="/vendor/bulma/bulma.css">
+    <link rel="stylesheet" href="/vendor/dylankok/all.css">
+    <link rel="stylesheet" href="/vendor/bulma/timeline.css">
+    <link rel="stylesheet" href="/vendor/dylankok/timeline.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/bulma/navbar.js"></script>
+    <script defer src="/vendor/dylankok/timeline.js"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/">
+                        Home
+                    </a>
+
+                    <a class="navbar-item is-active" href="/timeline.html">
+                        Timeline
+                    </a>
+
+                    <a class="navbar-item" href="/symptomschecker.html">
+                        Symptom Checker
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" target="_blank"
+                                href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+                                World Health Organisation
+                            </a>
+                            <a class="navbar-item" target="_blank" href="https://twitter.com/hashtag/COVID19">
+                                <i class="fab fa-twitter"></i>&ensp;#COVID19
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <div class="totalcounter">
+                                <p>There are <strong id="numberOfCases">...</strong> cases in the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="navbar" class="navbar navbar-transparent is-fixed-bottom" role="navigation" aria-label="main navigation">
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="#sidebar" class="button is-dark backtotop has-text-weight-bold" style="display: none;">
+                        <i class="fas fa-chevron-up"></i>&ensp;Return to top
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <section id="sidebar" class="hero is-medium homePage">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Timeline of Events
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-variable is-5">
+                <div class="column is-one-quarter" id="sidebar">
+                    <aside class="menu">
+                        <p class="menu-label">
+                            Months
+                        </p>
+                        <ul class="menu-list">
+                            <li><a href="#december">December 2019</a></li>
+                            <li><a href="#january">January 2020</a></li>
+                            <li><a href="#february">February 2020</a></li>
+                            <li><a href="#march">March 2020</a></li>
+                            <li><a href="#april">April 2020</a></li>
+                            <li><a href="#may">May 2020</a></li>
+                        </ul>
+                        <p class="menu-label">
+                            Quick Scroll
+                        </p>
+                        <ul class="menu-list">
+                            <li><a href="#firstDeath">First Death</a></li>
+                            <li><a href="#globalEmergency">Declaration of Global Emergency</a></li>
+                            <li><a href="#pandemic">Declaration of Pandemic</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="column">
+                    <div class="timeline is-centered">
+                        <header class="timeline-header">
+                            <span class="tag is-medium is-dark">2019</span>
+                        </header>
+                        <div class="timeline-item"></div>
+                        <header class="timeline-header">
+                            <a id="december" class="anchor"></a>
+                            <span class="tag is-light">December</span>
+                        </header>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">31st December</p>
+                                <p>China <strong>alerted</strong> the World Health Organisation about an unknown virus.
+                                </p>
+                            </div>
+                        </div>
+                        <header class="timeline-header">
+                            <span class="tag is-medium is-dark">2020</span>
+                        </header>
+                        <div class="timeline-item"></div>
+                        <header class="timeline-header">
+                            <a id="january" class="anchor"></a>
+                            <span class="tag is-light">January</span>
+                        </header>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">1st January</p>
+                                <p>Huanan Seafood Wholesale Market shut down by Chinese officials.</p>
+                                <p><strong>Infections exceeded 40 people.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">7th January</p>
+                                <p><strong>Virus identified</strong></p>
+                                <p>Identified as belonging to the coronavirus family.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <a id="firstDeath" class="anchor"></a>
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">11th January</p>
+                                <p><strong>First announced death</strong></p>
+                                <p>61-year-old man died of heart failure.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">13th January</p>
+                                <p><strong>First international transmission</strong></p>
+                                <p>Reported a case in Thailand.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">17th January</p>
+                                <p><strong>Second death</strong> in Wuhan</p>
+                                <p><strong>3 airports to start screening</strong> in the United States.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">20th January</p>
+                                <p><strong>Transmission method confirmed</strong> as human-to-human.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-dark">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">23rd January</p>
+                                <p><strong>Effective Quarentine</strong></p>
+                                <p>for cities of Wuhan, Xiantao and Chibi in Hubei province.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <a id="globalEmergency" class="anchor"></a>
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">30th January</p>
+                                <p><strong>WHO declares Global Emergency.</strong></p>
+                            </div>
+                        </div>
+                        <header class="timeline-header">
+                            <a id="february" class="anchor"></a>
+                            <span class="tag is-light">February</span>
+                        </header>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">2nd February</p>
+                                <p><strong>1st death outside China.</strong></p>
+                                <p>A Chinese man from Wuhan died in Philippines.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">6th February</p>
+                                <p><strong>Malaysia reported the country's first</strong> known human-to-human
+                                    transmission.</p>
+                                <p><strong>Europe reached 30 infected.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">7th February</p>
+                                <p><strong>Li Wenliang</strong>, a doctor who was one of the first to sound out about
+                                    the virus.</p>
+                                <p><strong>Jail for Hong Kongers</strong> who breach quarentine rules.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">9th February</p>
+                                <p><strong>Death toll surpasses SARS in China.</strong></p>
+                                <p>811 deaths, 37,198 infected.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">10th February</p>
+                                <p><strong>China had 908 confirmed deaths</strong> and a total of 40,171 infections.</p>
+                                <p>President Xi Jinping appeared in public, a first since the outbreak, urges confidence
+                                    in battle against the virus.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">13th February</p>
+                                <p><strong>1st death in Japan.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">13th February</p>
+                                <p><strong>1st death in Europe</strong>, from France.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">16th February</p>
+                                <p><strong>1st death in Taiwan.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">19th February</p>
+                                <p><strong>Iran reports 2 deaths</strong>, hours after first confirmed case.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">20th February</p>
+                                <p><strong>South Korea reports 1st death.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-danger">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">21th February</p>
+                                <p><strong>1st case in Israel.</strong></p>
+                                <p><strong>3rd death in Italy</strong>, shuts down Venice Carnival early.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">25th February</p>
+                                <p><strong>Iran's Deputy Health Minister Iraj Harirchi confirms he has
+                                        Coronavirus.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">27th February</p>
+                                <p><strong>US considers activating the Defence Protection Act.</strong></p>
+                                <p>Infections passed 82,000 worldwide, 2,800 deaths confirmed.</p>
+                            </div>
+                        </div>
+                        <header class="timeline-header">
+                            <a id="march" class="anchor"></a>
+                            <span class="tag is-light">March</span>
+                        </header>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">5th March</p>
+                                <p><strong>1st case in Saudi Arabia.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">7th March</p>
+                                <p><strong>China's Health Commission reported 99 new cases, down from 143 cases the day
+                                        before</strong>, with a total of 80,651 cases nationwide.</p>
+                                <p>China's economy effectively halted.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-dark">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">8th March</p>
+                                <p><strong>Lockdown for Saudi Arabia</strong>, for eastern Qatif region</p>
+                                <p>Announced the suspension of all schools and universities across the country.</p>
+                                <p><strong>Lockdown for Italy</strong></p>
+                                <p>Strict quarantine in the state of Lombardy and 14 other areas up north.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">9th March</p>
+                                <p><strong>Iran releases 70,000 prisoners</strong></p>
+                                <p>in an effort to curb the spread of Coronavirus.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <a id="pandemic" class="anchor"></a>
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">11th March</p>
+                                <p><strong>WHO declares pandemic.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-dark">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">15th March</p>
+                                <p><strong>Kazakhstan, the Philippines and Austria tightened restrictions.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-dark">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">18th March</p>
+                                <p><strong>"Human biosecurity emergency" declared by Australia.</strong></p>
+                                <p><strong>Chile and Guatemala shut down their borders.</strong></p>
+                                <p><strong>China reports, no cases</strong>, for the first time after the start of the
+                                    outbreak.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">20th March</p>
+                                <p><strong>More than 10,000 deaths confirmed.</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">25th March</p>
+                                <p><strong>US accounted for highest number of infections.</strong></p>
+                                <p>124,000 cases and 2,000 deaths.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-dark">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">27th March</p>
+                                <p><strong>Lockdown for India & South Africa.</strong></p>
+                            </div>
+                        </div>
+                        <header class="timeline-header">
+                            <a id="april" class="anchor"></a>
+                            <span class="tag is-light">April</span>
+                        </header>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-info">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">5th April</p>
+                                <p><strong>Prime Minister Boris Johnson of the UK, admitted to hospital</strong>, 10
+                                    days after testing positive.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-dark">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">7th April</p>
+                                <p><strong>Japan declares State of Emergency</strong>, amid spike of cases.</p>
+                                <p><strong>Singapore declares Circuit Breaker</strong>, partial lockdown to curb
+                                    infections.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">15th April</p>
+                                <p><strong>2,000,000 infections confirmed worldwide</strong></p>
+                                <p>Global economy projected to shrink by 3%, biggest contraction since the Great
+                                    Depression.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-success">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="heading">26th April</p>
+                                <p><strong>China announces that Wuhan has no more outstanding cases.</strong></p>
+                                <p>All who have been treated, discharged.</p>
+                            </div>
+                        </div>
+                        <header class="timeline-header">
+                            <a id="may" class="anchor"></a>
+                            <span class="tag is-light">May</span>
+                        </header>
+                        <div class="timeline-item">
+                            <div class="timeline-marker is-icon is-success">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p><strong>Many countries announce laxing of restrictions</strong></p>
+                                <p>Notably, Italy, Australia, France, Malaysia & Singapore.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-header">
+                            <span class="tag is-medium is-danger">
+                                <p>As of current, <strong class="has-text-white" id="numberOfCases2">...</strong> people
+                                    and counting, are still infected.</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <small>Data from <a target="_blank" href="https://www.aljazeera.com/news/2020/01/timeline-china-coronavirus-spread-200126061554884.html">Aljazeera</a>.</small>
+        </div>
+    </section>
+    <footer class="footer section has-background-black">
+        <div class="container">
+            <p class="has-text-white">Made with <i class="fas fa-heart has-text-danger"></i> by <a class="has-text-light" target="_blank" href="https://kakumei.naka.to/">Dylan Kok</a>.</p>
+            <p class="has-text-grey-light">Not affliated with World Health Organisation.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
