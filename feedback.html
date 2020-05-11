@@ -81,9 +81,10 @@
             </div>
         </div>
     </section>
-    <section class="section">
+
+    <section id="form-section" class="section">
         <div class="container">
-            <form id="contact" data-netlify-recaptcha='true' data-netlify='true' netlify-honeypot='begone-bot!' action="/feedback-done.html">
+            <form id="contact" data-netlify-recaptcha='true' data-netlify='true' netlify-honeypot='bot-field' action="?submitted=1">
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control has-icons-left has-icons-right">
@@ -127,6 +128,15 @@
             </form>
         </div>
     </section>
+
+    <section id="done" class="section" style="padding-top: 13vh; padding-bottom: 13vh; display: none;">
+        <div class="container has-text-centered">
+            <h1 class="title is-1"><i class="fas fa-grin-beam has-text-warning"></i>&ensp;Thank you!</h1>
+            <p class="subtitle">This webpage thrives on feedback in order to provide users with the best experience possible.<br>Your feedback is a step towards that goal.</p>
+            <a class="button is-danger is-light" href="/"><i class="fas fa-home"></i>&ensp;Return Home</a>
+        </div>
+    </section>
+
     <footer class="footer section has-background-black">
         <div class="container">
             <p class="has-text-white">Made with <i class="fas fa-heart has-text-danger"></i> by <a
