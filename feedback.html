@@ -100,7 +100,7 @@
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="text">
+                        <input class="input" type="text" name="Name">
                         <span class="icon is-small is-left">
                             <i class="fas fa-user"></i>
                         </span>
@@ -110,7 +110,7 @@
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="hello@example.com">
+                        <input class="input" type="email" name="Email" placeholder="hello@example.com">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -120,7 +120,7 @@
                 <div class="field">
                     <label class="label">Message</label>
                     <div class="control">
-                        <textarea class="textarea"></textarea>
+                        <textarea class="textarea" name="Message"></textarea>
                     </div>
                 </div>
 
@@ -128,7 +128,7 @@
                     <div data-netlify-recaptcha="true"></div>
                 </div>
 
-                <div class="hidden">
+                <div style="display: none;">
                     <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                 </div>
 
