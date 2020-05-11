@@ -11,6 +11,9 @@ $(window).scroll(function (event) {
 
 $.getJSON("https://api.covid19api.com/world/total", function(data) {
   $( "#numberOfCases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
+  $( "#dead" ).text(parseFloat(data.TotalDeaths).toLocaleString("eng"));
+  $( "#active-cases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
+  $( "#recovered" ).text(parseFloat(data.TotalRecovered).toLocaleString("eng"));
 });
 
 $('#tool').hover(function(){
