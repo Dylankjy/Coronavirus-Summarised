@@ -1,0 +1,41 @@
+section.hero.homePage .title {
+    font-size: 4rem;
+    color: #c00b36;
+    font-weight: 800;
+}
+
+section.hero.homePage .subtitle {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 769px) {
+    section.hero.homePage .title {
+        font-size: 3rem;
+    }
+    section.hero.homePage .subtitle {
+        font-size: 1.25rem;
+    }
+    .hero-body {
+        padding: 6rem 1.5rem;
+    }
+    section.hero.homePage {
+        background-size: 70rem;
+    }
+}
+
+a.button.backtotop {
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow .15s ease;
+    margin: 2rem
+}
+
+a.button.backtotop:hover {
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -8rem;
+    visibility: hidden;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback - COVID-19, summarised.</title>
+    <link rel="stylesheet" href="/vendor/bulma/bulma.css">
+    <link rel="stylesheet" href="/vendor/dylankok/all.css">
+    <link rel="stylesheet" href="/vendor/dylankok/feedback.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/bulma/navbar.js"></script>
+    <script defer src="/vendor/dylankok/feedback.js"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/">
+                        Home
+                    </a>
+
+                    <a class="navbar-item is-active" href="/timeline.html">
+                        Timeline
+                    </a>
+
+                    <a class="navbar-item" href="/symptomschecker.html">
+                        Symptom Checker
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" target="_blank"
+                                href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+                                World Health Organisation
+                            </a>
+                            <a class="navbar-item" target="_blank" href="https://twitter.com/hashtag/COVID19">
+                                <i class="fab fa-twitter"></i>&ensp;#COVID19
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <div class="totalcounter">
+                                <p>There are <strong id="numberOfCases">...</strong> cases in the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="navbar" class="navbar navbar-transparent is-fixed-bottom" role="navigation" aria-label="main navigation">
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="#sidebar" class="button is-dark backtotop has-text-weight-bold" style="display: none;">
+                        <i class="fas fa-chevron-up"></i>&ensp;Return to top
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <section id="sidebar" class="hero is-medium homePage">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Feedback & Error Reporting
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <form id="contact" data-netlify-recaptcha='true' data-netlify='true' netlify-honeypot='begone-bot!'>
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="text">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="hello@example.com">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Message</label>
+                    <div class="control">
+                        <textarea class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class='field'>
+                    <div data-netlify-recaptcha="true"></div>
+                </div>
+
+                <div class="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </div>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link">Submit</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer section has-background-black">
+        <div class="container">
+            <p class="has-text-white">Made with <i class="fas fa-heart has-text-danger"></i> by <a
+                    class="has-text-light" target="_blank" href="https://kakumei.naka.to/">Dylan Kok</a>.</p>
+            <p class="has-text-grey-light">Not affliated with World Health Organisation.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
