@@ -12,3 +12,9 @@ $(window).scroll(function (event) {
 $.getJSON("https://api.covid19api.com/world/total", function(data) {
   $( "#numberOfCases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
 });
+
+$('#tool').hover(function(){
+    $("#tool-arrow-right").addClass("tool-arrow-right-move");
+}, function(){
+    $("#tool-arrow-right").removeClass("tool-arrow-right-move");
+})
