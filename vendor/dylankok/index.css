@@ -20,11 +20,15 @@ section.hero.homePage .subtitle {
 
 .box {
     transition: ease .40s;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
 }
 
-.box:hover {
-    transform: scale(1.035);
-    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+/* Don't use box animation when on mobile */
+@media screen and (min-width: 769px) {
+    .box:hover {
+        transform: scale(1.035);
+        box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .icon.icon-symptom {
@@ -43,16 +47,56 @@ section.hero.homePage .subtitle {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.icon.icon-symptom-small.black {
+    border-radius: 99999px;
+    background: rgba(190, 0, 0, 0.8);
+    padding: 2.25rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.tool-arrow-right-move {
+    animation: move-right 1.25s ease-in-out infinite;
+}
+
+#tool {
+    transition: ease .40s;
+}
+
+#tool:hover {
+    background-color: #2485c5 !important;
+}
+
+@keyframes move-right{
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+        transform: translateX(-20px)
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @media screen and (max-width: 769px) {
     section.hero.homePage .title {
         font-size: 3rem;
     }
+
     section.hero.homePage .subtitle {
         font-size: 1.25rem;
     }
+
     .hero-body {
         padding: 6rem 1.5rem;
     }
+
     section.hero.homePage {
         background-size: 70rem;
     }
