@@ -19,7 +19,6 @@ section.hero.homePage .subtitle {
         padding: 6rem 1.5rem;
     }
     section.hero.homePage {
-        background: url("/static/index/hero-bg.png") right no-repeat;
         background-size: 70rem;
     }
 }
