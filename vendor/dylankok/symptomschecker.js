@@ -24,7 +24,7 @@ $("#symtoms-form").submit(function (e) {
   if ($('#contact:checked').val() === "yes") {
     counter = counter + 1
   }
-  
+
   // Get checkbox values and add score
   if ($("#cough").prop("checked") == true) {
     counter = counter + 1
@@ -70,18 +70,18 @@ $("#symtoms-form").submit(function (e) {
 
   // Show results based on score
   if (counter === 0) {
-    $("#form").hide(); 
-    $("#good").show("fade"); 
-    
+    $("#form").hide();
+    $("#good").show("fade");
+
   } else if (counter === 1) {
-    $("#form").hide(); 
-    $("#maybe").show("fade"); 
+    $("#form").hide();
+    $("#maybe").show("fade");
   } else if (counter === 2) {
-    $("#form").hide(); 
-    $("#high").show("fade"); 
+    $("#form").hide();
+    $("#high").show("fade");
   } else if (counter >= 4) {
-    $("#form").hide(); 
-    $("#veryhigh").show("fade"); 
+    $("#form").hide();
+    $("#veryhigh").show("fade");
   }
 });
 
@@ -89,7 +89,7 @@ $("#symtoms-form").submit(function (e) {
 // Retry function
 function retryForm(section) {
   window.scrollTo(0, 0);
-  $(section).hide(); 
-  $("#form").show(); 
+  $(section).hide();
+  $("#form").show();
   $('#symtoms-form')[0].reset();
 }
