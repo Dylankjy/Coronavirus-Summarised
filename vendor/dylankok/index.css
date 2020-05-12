@@ -13,6 +13,18 @@ section.hero.homePage .subtitle {
     font-size: 3rem;
 }
 
+section#frontliners {
+    background: url("/static/doctor.jpeg") center center no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.35);
+    background-blend-mode: overlay;
+    transition: ease .40s;
+}
+
+section#frontliners:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 #corona-info {
     margin: auto;
     width: 85vw;
@@ -55,6 +67,10 @@ section.hero.homePage .subtitle {
     color: rgba(255, 255, 255, 0.9);
 }
 
+.section-link-arrow-right {
+    text-shadow: 0 0px 20px rgba(0, 0, 0, 0.5);
+}
+
 .tool-arrow-right-move {
     animation: move-right 1.25s ease-in-out infinite;
 }
@@ -71,18 +87,21 @@ section.hero.homePage .subtitle {
     font-size: 4rem;
 }
 
-@keyframes move-right{
+@keyframes move-right {
     0% {
         opacity: 0;
     }
+
     25% {
         opacity: 1;
         transform: translateX(-20px)
     }
+
     50% {
         opacity: 1;
         transform: translateX(0px)
     }
+
     100% {
         opacity: 0;
     }

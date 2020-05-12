@@ -21,3 +21,9 @@ $('#tool').hover(function(){
 }, function(){
     $("#tool-arrow-right").removeClass("tool-arrow-right-move");
 })
+
+$('#frontliners').hover(function(){
+    $("#tool-arrow-right2").addClass("tool-arrow-right-move");
+}, function(){
+    $("#tool-arrow-right2").removeClass("tool-arrow-right-move");
+})
