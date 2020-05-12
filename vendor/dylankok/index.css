@@ -67,6 +67,10 @@ section.hero.homePage .subtitle {
     background-color: #0096ad !important;
 }
 
+.fa-hero {
+    font-size: 4rem;
+}
+
 @keyframes move-right{
     0% {
         opacity: 0;
@@ -99,5 +103,9 @@ section.hero.homePage .subtitle {
 
     section.hero.homePage {
         background-size: 70rem;
+    }
+
+    .fa-hero {
+        font-size: 3rem;
     }
 }
