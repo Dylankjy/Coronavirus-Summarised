@@ -42,7 +42,7 @@ section.hero.homePage {
     transition: ease .40s;
 }
 
-.image > img {
+.image > img, .image > video {
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.6);
     border-radius: 8px;
     pointer-events: none;
