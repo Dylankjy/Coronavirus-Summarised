@@ -15,14 +15,16 @@ section.hero.homePage .subtitle {
 
 section#frontliners {
     background: url("/static/doctor.jpeg") center center no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-color: rgba(0, 0, 0, 0.35);
     background-blend-mode: overlay;
-    transition: ease .40s;
+    transition: all ease .40s;
 }
 
 section#frontliners:hover {
     background-color: rgba(0, 0, 0, 0.5);
+    background: url("/static/doctor.jpeg") center center no-repeat;
+    background-size: 110%;
 }
 
 #corona-info {
