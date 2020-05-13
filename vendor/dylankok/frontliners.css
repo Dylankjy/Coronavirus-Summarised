@@ -1,0 +1,147 @@
+section.hero.homePage {
+    background: url("/static/doctor.jpeg") no-repeat center;
+    background-color: #000;
+    background-size: cover !important;
+    background-color: rgba(0, 0, 0, 0.35) !important;
+    background-blend-mode: overlay !important;
+    transition: background ease-in-out .5s !important;
+}
+
+.has-background-success {
+    background-color: #29b486 !important;
+}
+
+.navbar-transparent {
+    background-color: transparent !important;
+}
+
+section.hero.homePage .title {
+    font-size: 6rem;
+    color: #ff6b8d;
+    font-weight: 800;
+    text-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
+}
+
+section.hero.homePage .subtitle {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+section#frontliners {
+    background: url("/static/doctor.jpeg") center center no-repeat;
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    background-blend-mode: overlay;
+    transition: all ease .40s;
+}
+
+section#frontliners:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    background: url("/static/doctor.jpeg") center center no-repeat;
+    background-size: 110%;
+}
+
+#corona-info {
+    margin: auto;
+    width: 85vw;
+}
+
+.box {
+    transition: ease .40s;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Don't use box animation when on mobile */
+@media screen and (min-width: 769px) {
+    .box:hover {
+        transform: scale(1.035);
+        box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.icon.icon-symptom {
+    border-radius: 99999px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, .8);
+}
+
+.icon.icon-symptom-small {
+    border-radius: 99999px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.icon.icon-symptom-small.black {
+    border-radius: 99999px;
+    background: rgba(190, 0, 0, 0.8);
+    padding: 2.25rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section-link-arrow-right {
+    text-shadow: 0 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tool-arrow-right-move {
+    animation: move-right 1.25s ease-in-out infinite;
+}
+
+#tool {
+    transition: ease .40s;
+}
+
+#tool:hover {
+    background-color: #0096ad !important;
+}
+
+.fa-hero {
+    font-size: 4rem;
+}
+
+@keyframes move-right {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateX(-20px)
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    section.hero.homePage .title {
+        font-size: 3rem;
+    }
+
+    section.hero.homePage .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-body {
+        padding: 6rem 1.5rem;
+    }
+
+    section.hero.homePage {
+        background-size: 70rem;
+    }
+
+    .fa-hero {
+        font-size: 3rem;
+    }
+}
