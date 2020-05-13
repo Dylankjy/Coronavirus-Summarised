@@ -14,6 +14,16 @@ html {
     background-color: transparent;
 }
 
+section.hero.homePage .title {
+    font-size: 4rem;
+    color: #c00b36;
+    font-weight: 800;
+}
+
+section.hero.homePage .subtitle {
+    font-size: 1rem;
+}
+
 section.hero.homePage {
     background: url("/static/hero-bg.png") right no-repeat;
     background-size: cover;
