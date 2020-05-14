@@ -52,9 +52,47 @@ section.hero.homePage {
     transition: ease .40s;
 }
 
-.image > img, .image > video {
+.image>img,
+.image>video {
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.6);
     border-radius: 8px;
     pointer-events: none;
     user-select: none;
+}
+
+@media screen and (min-width: 770px) {
+    .is-black .navbar-item.is-active {
+        border-top: solid 3px white;
+    }
+
+    .navbar-transparent .navbar-item.is-active {
+        border-top: solid 3px #c00b36;
+        background: none;
+    }
+
+    .is-black .navbar-item {
+        border-top: solid 3px transparent;
+    }
+
+    .navbar-transparent .navbar-item {
+        border-top: solid 3px transparent;
+        background: none;
+    }
+
+    .navbar-item.is-active {
+        transition: border ease-in-out .25s;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .navbar-item.is-active {
+        border-left: solid 3px #c00b36;
+        background: none;
+    }
+    
+    
+    .navbar-item {
+        border-left: solid 3px transparent;
+        background: none;
+    }
 }
