@@ -60,7 +60,7 @@ section.hero.homePage {
     user-select: none;
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 1024px) {
     .is-black .navbar-item.is-active {
         border-top: solid 3px white;
     }
@@ -84,7 +84,7 @@ section.hero.homePage {
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1024px) {
     .navbar-item.is-active {
         border-left: solid 3px #c00b36;
         background: none;
