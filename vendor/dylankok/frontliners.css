@@ -145,3 +145,12 @@ section#frontliners:hover {
         font-size: 3rem;
     }
 }
+
+/* Preload Images for Slideshow */
+#preload-01 { background: url("/static/frontliners/hero-1.jpg") no-repeat -9999px -9999px; }
+#preload-02 { background: url("/static/frontliners/hero-2.jpg") no-repeat -9999px -9999px; }
+#preload-03 { background: url("/static/frontliners/hero-3.jpg") no-repeat -9999px -9999px; }
+#preload-04 { background: url("/static/frontliners/hero-4.jpg") no-repeat -9999px -9999px; }
+#preload-05 { background: url("/static/frontliners/hero-5.jpg") no-repeat -9999px -9999px; }
+#preload-06 { background: url("/static/frontliners/hero-6.jpg") no-repeat -9999px -9999px; }
+#preload-07 { background: url("/static/frontliners/hero-7.jpg") no-repeat -9999px -9999px; }
