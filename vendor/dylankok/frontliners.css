@@ -134,10 +134,6 @@ section.hero.homePage .subtitle {
 }
 
 /* Preload Images for Slideshow */
-.preload {
-    background-size: -9999px -9999px !important;
-}
-
 .preload-1 {
     background: url("/static/frontliners/hero-1.jpg") no-repeat !important;
 }
