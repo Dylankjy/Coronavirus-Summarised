@@ -1,6 +1,7 @@
 section.hero.homePage {
     background: url("/static/doctor.jpeg") no-repeat center;
     background-color: #000;
+    background-position: center !important;
     background-size: cover !important;
     background-color: rgba(0, 0, 0, 0.35) !important;
     background-blend-mode: overlay !important;
@@ -17,34 +18,20 @@ section.hero.homePage {
 
 section.hero.homePage .title {
     font-size: 6rem;
-    color: #ff6b8d;
+    color: white;
     font-weight: 800;
+    text-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
+}
+
+section.hero.homePage .title-top {
     text-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
 }
 
 section.hero.homePage .subtitle {
     font-size: 2rem;
     color: white;
+    opacity: .88;
     text-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
-}
-
-section#frontliners {
-    background: url("/static/doctor.jpeg") center center no-repeat;
-    background-size: 100%;
-    background-color: rgba(0, 0, 0, 0.35);
-    background-blend-mode: overlay;
-    transition: all ease .40s;
-}
-
-section#frontliners:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    background: url("/static/doctor.jpeg") center center no-repeat;
-    background-size: 110%;
-}
-
-#corona-info {
-    margin: auto;
-    width: 85vw;
 }
 
 .box {
@@ -147,10 +134,34 @@ section#frontliners:hover {
 }
 
 /* Preload Images for Slideshow */
-#preload-01 { background: url("/static/frontliners/hero-1.jpg") no-repeat -9999px -9999px; }
-#preload-02 { background: url("/static/frontliners/hero-2.jpg") no-repeat -9999px -9999px; }
-#preload-03 { background: url("/static/frontliners/hero-3.jpg") no-repeat -9999px -9999px; }
-#preload-04 { background: url("/static/frontliners/hero-4.jpg") no-repeat -9999px -9999px; }
-#preload-05 { background: url("/static/frontliners/hero-5.jpg") no-repeat -9999px -9999px; }
-#preload-06 { background: url("/static/frontliners/hero-6.jpg") no-repeat -9999px -9999px; }
-#preload-07 { background: url("/static/frontliners/hero-7.jpg") no-repeat -9999px -9999px; }
+.preload {
+    background-size: -9999px -9999px !important;
+}
+
+.preload-1 {
+    background: url("/static/frontliners/hero-1.jpg") no-repeat !important;
+}
+
+.preload-2 {
+    background: url("/static/frontliners/hero-2.jpg") no-repeat !important;
+}
+
+.preload-3 {
+    background: url("/static/frontliners/hero-3.jpg") no-repeat !important;
+}
+
+.preload-4 {
+    background: url("/static/frontliners/hero-4.jpg") no-repeat !important;
+}
+
+.preload-5 {
+    background: url("/static/frontliners/hero-5.jpg") no-repeat !important;
+}
+
+.preload-6 {
+    background: url("/static/frontliners/hero-6.jpg") no-repeat !important;
+}
+
+.preload-7 {
+    background: url("/static/frontliners/hero-7.jpg") no-repeat !important;
+}
