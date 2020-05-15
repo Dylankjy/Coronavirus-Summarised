@@ -12,12 +12,13 @@ $.getJSON("https://api.covid19api.com/world/total", function(data) {
   $( "#saved" ).text(parseFloat(data.TotalRecovered).toLocaleString("eng"));
 });
 
-var hero = 1
+var hero = 0
 setInterval(() => {
-  $("section.hero.homePage").css("background", "url(" + "/static/frontliners/hero-" + hero + ".jpg) no-repeat center")
+  $("section.hero.homePage").removeClass("preload-" + hero)
   hero++
-  console.log(hero)
+  $("section.hero.homePage").addClass("preload-" + hero)
   if (hero >= 8) {
-    hero = 1
+    $("section.hero.homePage").removeClass("preload-" + hero)
+    hero = 0
   }
 }, 5000);
