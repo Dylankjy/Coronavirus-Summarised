@@ -17,7 +17,7 @@ setInterval(() => {
   $("section.hero.homePage").removeClass("preload-" + hero)
   hero++
   $("section.hero.homePage").addClass("preload-" + hero)
-  if (hero >= 8) {
+  if (hero > 8) {
     $("section.hero.homePage").removeClass("preload-" + hero)
     hero = 0
   }
