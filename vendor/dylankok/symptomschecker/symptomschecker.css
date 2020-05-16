@@ -1,0 +1,14 @@
+@media screen and (max-width: 769px) {
+    section.hero.homePage .title {
+        font-size: 3rem;
+    }
+    section.hero.homePage .subtitle {
+        font-size: 1.25rem;
+    }
+    .hero-body {
+        padding: 6rem 1.5rem;
+    }
+    section.hero.homePage {
+        background-size: 70rem;
+    }
+}
