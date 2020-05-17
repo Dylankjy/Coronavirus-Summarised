@@ -133,6 +133,10 @@ section.hero.homePage .subtitle {
     }
 }
 
+#smiley {
+    transition: color ease .2s;
+}
+
 /* Preload Images for Slideshow */
 .preload-1 {
     background: url("/static/frontliners/hero-1.jpg") no-repeat !important;
