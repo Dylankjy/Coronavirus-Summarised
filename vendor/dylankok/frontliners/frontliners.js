@@ -1,15 +1,15 @@
 $(window).scroll(function (event) {
   var scroll = $(window).scrollTop();
   if (scroll === 0) {
-      $("#navbar").addClass("navbar-transparent");
+    $("#navbar").addClass("navbar-transparent");
   } else {
-      $("#navbar").removeClass("navbar-transparent");
+    $("#navbar").removeClass("navbar-transparent");
   }
 });
 
-$.getJSON("https://api.covid19api.com/world/total", function(data) {
-  $( "#numberOfCases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
-  $( "#saved" ).text(parseFloat(data.TotalRecovered).toLocaleString("eng"));
+$.getJSON("https://api.covid19api.com/world/total", function (data) {
+  $("#numberOfCases").text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
+  $("#saved").text(parseFloat(data.TotalRecovered).toLocaleString("eng"));
 });
 
 var hero = 0
@@ -22,3 +22,8 @@ setInterval(() => {
     hero = 0
   }
 }, 5000);
+
+$("#smiley").click(function () {
+  $("#smiley").toggleClass("has-text-grey-light");
+  $("#smiley").toggleClass("has-text-warning");
+});
