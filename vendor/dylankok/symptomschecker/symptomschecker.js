@@ -10,7 +10,7 @@ $(window).scroll(function (event) {
   }
 });
 
-// Fetch API data
+// Get data for navbar
 $.getJSON("https://api.covid19api.com/world/total", function (data) {
   $("#numberOfCases").text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
 });

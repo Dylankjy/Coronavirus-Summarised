@@ -1,3 +1,4 @@
+// Navbar Fading
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if (scroll === 0) {
@@ -9,6 +10,7 @@ $(window).scroll(function (event) {
     }
 });
 
+// Get data for navbar + data for timeline
 $.getJSON("https://api.covid19api.com/world/total", function(data) {
   $( "#numberOfCases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
   $( "#numberOfCases2" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));

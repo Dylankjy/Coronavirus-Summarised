@@ -1,18 +1,22 @@
+/* Hero header */
 section.hero.homePage {
     background: url("/static/earth.png") right no-repeat;
     background-size: cover;
 }
 
+/* Hero title */
 section.hero.homePage .title {
     font-size: 7rem;
     color: #c00b36;
     font-weight: 800;
 }
 
+/* Hero subtitle */
 section.hero.homePage .subtitle {
     font-size: 3rem;
 }
 
+/* Section background for #frontliners section */
 section#frontliners {
     background: url("/static/doctor.jpeg") center center no-repeat;
     background-size: 100%;
@@ -21,20 +25,17 @@ section#frontliners {
     transition: all ease .40s;
 }
 
+/* Section background for #frontliners section (:hover)*/
 section#frontliners:hover {
     background-color: rgba(0, 0, 0, 0.5);
     background: url("/static/doctor.jpeg") center center no-repeat;
     background-size: 110%;
 }
 
-#corona-info {
+/* Section adjust width and center to page for #corona-info */
+section#corona-info {
     margin: auto;
     width: 85vw;
-}
-
-.box {
-    transition: ease .40s;
-    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Don't use box animation when on mobile */
@@ -45,6 +46,7 @@ section#frontliners:hover {
     }
 }
 
+/* Just read the name of the class. I don't even know how to explain it any more simply */
 .icon.icon-symptom {
     border-radius: 99999px;
     background: rgba(255, 255, 255, 0.8);
@@ -53,6 +55,7 @@ section#frontliners:hover {
     color: rgba(0, 0, 0, .8);
 }
 
+/* This one also */
 .icon.icon-symptom-small {
     border-radius: 99999px;
     background: rgba(255, 255, 255, 0.2);
@@ -61,6 +64,7 @@ section#frontliners:hover {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* This also */
 .icon.icon-symptom-small.black {
     border-radius: 99999px;
     background: rgba(190, 0, 0, 0.8);
@@ -69,26 +73,27 @@ section#frontliners:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* Arrow for section */
 .section-link-arrow-right {
     text-shadow: 0 0px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Animation via JS for arrow */
 .tool-arrow-right-move {
     animation: move-right 1.25s ease-in-out infinite;
 }
 
-#tool {
+/* Symptom checker section */
+section#tool {
     transition: ease .40s;
 }
 
-#tool:hover {
+/* Symptom checker section (:hover) */
+section#tool:hover {
     background-color: #0096ad !important;
 }
 
-.fa-hero {
-    font-size: 4rem;
-}
-
+/* Animation for arrow */
 @keyframes move-right {
     0% {
         opacity: 0;
@@ -109,6 +114,7 @@ section#frontliners:hover {
     }
 }
 
+/* Responsive Classes for phones */
 @media screen and (max-width: 769px) {
     section.hero.homePage .title {
         font-size: 3rem;
