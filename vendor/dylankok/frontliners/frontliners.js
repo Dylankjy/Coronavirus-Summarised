@@ -1,3 +1,4 @@
+// Navbar Fading
 $(window).scroll(function (event) {
   var scroll = $(window).scrollTop();
   if (scroll === 0) {
@@ -7,11 +8,13 @@ $(window).scroll(function (event) {
   }
 });
 
+// Get data for navbar + data for section below hero
 $.getJSON("https://api.covid19api.com/world/total", function (data) {
   $("#numberOfCases").text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
   $("#saved").text(parseFloat(data.TotalRecovered).toLocaleString("eng"));
 });
 
+// Slideshow for hero
 var hero = 0
 setInterval(() => {
   $("section.hero.homePage").removeClass("preload-" + hero)
@@ -23,6 +26,7 @@ setInterval(() => {
   }
 }, 5000);
 
+// Easter egg: Change color of emoji
 $("#smiley").click(function () {
   $("#smiley").toggleClass("has-text-grey-light");
   $("#smiley").toggleClass("has-text-warning");

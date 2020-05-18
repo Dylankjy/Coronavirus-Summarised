@@ -1,31 +1,38 @@
-@media screen and (max-width: 769px) {
-    section.hero.homePage .title {
-        font-size: 3rem;
-    }
-    section.hero.homePage .subtitle {
-        font-size: 1.25rem;
-    }
-    .hero-body {
-        padding: 6rem 1.5rem;
-    }
-    section.hero.homePage {
-        background-size: 70rem;
-    }
-}
-
+/* Back-to-top button */
 a.button.backtotop {
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
     transition: box-shadow .15s ease;
     margin: 2rem
 }
 
+/* Back-to-top button (:hover) */
 a.button.backtotop:hover {
     box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* Custom anchor tags to adjust scrolling */
 a.anchor {
     display: block;
     position: relative;
     top: -8rem;
     visibility: hidden;
+}
+
+/* Responsive Classes for phones */
+@media screen and (max-width: 769px) {
+    section.hero.homePage .title {
+        font-size: 3rem;
+    }
+
+    section.hero.homePage .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-body {
+        padding: 6rem 1.5rem;
+    }
+
+    section.hero.homePage {
+        background-size: 70rem;
+    }
 }
