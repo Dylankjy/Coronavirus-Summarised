@@ -15,7 +15,7 @@ html {
 
 /* Transparent navbar: For page when NOT scroll */
 .navbar-transparent {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 /* Navbar Counter */
