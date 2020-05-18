@@ -1,3 +1,4 @@
+// Navbar Fading
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if (scroll === 0) {
@@ -9,10 +10,12 @@ $(window).scroll(function (event) {
     }
 });
 
+// Get data for navbar
 $.getJSON("https://api.covid19api.com/world/total", function(data) {
   $( "#numberOfCases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
 });
 
+// Detect whether query string 'submitted' = 1 to display completed page
 if (location.search === "?submitted=1") {
     window.scrollTo(0, 0);
     $("#form-section").hide();
