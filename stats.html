@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statistics - COVID-19, summarised.</title>
+    <link rel="stylesheet" href="/vendor/bulma/bulma.css">
+    <link rel="stylesheet" href="/vendor/dylankok/all.css">
+    <link rel="stylesheet" href="/vendor/dylankok/stats/stats.css">
+    <link rel="stylesheet" href="/vendor/chartjs/Chart.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css">
+    <script src="https://kit.fontawesome.com/b6f21d7f2c.js" crossorigin="anonymous"></script>
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/bulma/navbar.js"></script>
+    <script src="/vendor/chartjs/Chart.min.js"></script>
+    <script src="/vendor/momentjs/moment.js"></script>
+    <script defer src="/vendor/dylankok/stats/stats.js"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/">
+                        Home
+                    </a>
+
+                    <a class="navbar-item" href="/frontliners.html">
+                        Frontliners
+                    </a>
+
+                    <a class="navbar-item" href="/timeline.html">
+                        Timeline
+                    </a>
+
+                    <a class="navbar-item" href="/symptomschecker.html">
+                        Symptom Checker
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item" target="_blank"
+                                href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+                                World Health Organisation
+                            </a>
+                            <a class="navbar-item" target="_blank" href="https://twitter.com/hashtag/COVID19">
+                                <i class="fab fa-twitter"></i>&ensp;#COVID19
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <div class="totalcounter">
+                                <p>There are <strong id="numberOfCases">...</strong> active cases in the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="sidebar" class="hero is-medium homePage">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Statistics
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="mobile-warn" class="section">
+        <div class="container">
+            <div class="notification is-black">
+                <h2 class="title is-4">Just a heads up!</h2>
+                <p class="subtitle is-6">We have hidden the Worldwide Data Chart due to display issues on small devices.<br><strong class="has-text-grey-light">Please use a device with a larger screen, preferably a computer.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="chart-section" class="section">
+        <div class="container">
+            <h1 class="title">Worldwide Data Chart</h1>
+            <h3 class="subtitle">For the past 7 days.</h3>
+            <canvas id="globalChart" width="400" height="100"></canvas>
+        </div>
+    </section>
+
+    <section class="section has-background-light">
+        <div class="container">
+            <div class="box">
+                <table id="major-stats" class="table is-fullwidth">
+                    <tr>
+                        <th><i class="fas fa-map-marker-alt"></i>&ensp;Region</th>
+                        <th><i class="fas fa-viruses"></i>&ensp;Confirmed Cases</th>
+                        <th class="has-text-success"><i class="fas fa-star-of-life"></i>&ensp;Recovered</th>
+                        <th class="has-text-danger"><i class="fas fa-skull-crossbones"></i>&ensp;Dead</th>
+                    </tr>
+                    <tr class="has-background-light has-text-weight-bold">
+                        <td style="color: rgb(26, 151, 235);"><i style="text-align: center;" class="fas fa-globe-americas table-worldwide"></i> Worldwide</td>
+                        <td id="world-active">...</td>
+                        <td id="world-rec">...</td>
+                        <td id="world-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-us"></span> United States of America</td>
+                        <td id="us-active">...</td>
+                        <td id="us-rec">...</td>
+                        <td id="us-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-mx"></span> Mexico</td>
+                        <td id="mx-active">...</td>
+                        <td id="mx-rec">...</td>
+                        <td id="mx-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-gb"></span> United Kingdom</td>
+                        <td id="gb-active">...</td>
+                        <td id="gb-rec">...</td>
+                        <td id="gb-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-fr"></span> France</td>
+                        <td id="fr-active">...</td>
+                        <td id="fr-rec">...</td>
+                        <td id="fr-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-it"></span> Italy</td>
+                        <td id="it-active">...</td>
+                        <td id="it-rec">...</td>
+                        <td id="it-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-ru"></span> Russia</td>
+                        <td id="ru-active">...</td>
+                        <td id="ru-rec">...</td>
+                        <td id="ru-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-cn"></span> People's Republic of China (Mainland)</td>
+                        <td id="cn-active">...</td>
+                        <td id="cn-rec">...</td>
+                        <td id="cn-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-tw"></span> Republic of China (Taiwan)</td>
+                        <td id="tw-active">...</td>
+                        <td id="tw-rec">...</td>
+                        <td id="tw-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-sg"></span> Singapore</td>
+                        <td id="sg-active">...</td>
+                        <td id="sg-rec">...</td>
+                        <td id="sg-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-id"></span> Indonesia</td>
+                        <td id="id-active">...</td>
+                        <td id="id-rec">...</td>
+                        <td id="id-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-jp"></span> Japan</td>
+                        <td id="jp-active">...</td>
+                        <td id="jp-rec">...</td>
+                        <td id="jp-dead">...</td>
+                    </tr>
+                    <tr>
+                        <td><span class="flag-icon flag-icon-kr"></span> Republic of Korea (South)</td>
+                        <td id="kr-active">...</td>
+                        <td id="kr-rec">...</td>
+                        <td id="kr-dead">...</td>
+                    </tr>
+                </table>
+                <small class="has-text-grey"><i class="fas fa-info-circle"></i>&ensp;Information displayed above is automagically updated multiple times a day.</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="section has-background-grey-lighter">
+        <div class="container has-text-centered">
+            <h1 class="title">My country isn't listed!</h1>
+            <p class="subtitle">The awesome folks at Google has a comprehensive list of every single country's COVID-19 data.</p>
+            <a class="button is-danger" href="https://news.google.com/covid19/map" target="_blank">View&ensp;<i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </section>
+
+    <footer class="footer section has-background-black">
+        <div class="container">
+            <p class="has-text-white">Made with <i class="fas fa-heart has-text-danger"></i> by <a
+                    class="has-text-light" target="_blank" href="https://kakumei.naka.to/">Dylan Kok</a>.</p>
+            <p class="has-text-grey-light">Not affliated with the World Health Organisation.</p>
+            <p class="has-text-grey"><i class="far fa-copyright"></i> under <a class="has-text-danger" href="copyright.html" target="_blank">GNU AGPLv3</a>.</p>
+            <p><a href="/feedback.html">Feedback & Suggestions</a> • <a href="/datasources.html" target="_blank">Data &
+                    Image Sources</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
