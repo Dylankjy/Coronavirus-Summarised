@@ -1,3 +1,4 @@
+// Navbar Fading
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if (scroll === 0) {
@@ -9,6 +10,7 @@ $(window).scroll(function (event) {
     }
 });
 
+// Get data for navbar + data for section below hero
 $.getJSON("https://api.covid19api.com/world/total", function(data) {
   $( "#numberOfCases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
   $( "#dead" ).text(parseFloat(data.TotalDeaths).toLocaleString("eng"));
@@ -16,12 +18,14 @@ $.getJSON("https://api.covid19api.com/world/total", function(data) {
   $( "#recovered" ).text(parseFloat(data.TotalRecovered).toLocaleString("eng"));
 });
 
+// Detect for hover of section "#tool" to move arrow "#tool-arrow-right"
 $('#tool').hover(function(){
     $("#tool-arrow-right").addClass("tool-arrow-right-move");
 }, function(){
     $("#tool-arrow-right").removeClass("tool-arrow-right-move");
 })
 
+// Detect for hover of section "#frontliners" to move arrow "#tool-arrow-right2"
 $('#frontliners').hover(function(){
     $("#tool-arrow-right2").addClass("tool-arrow-right-move");
 }, function(){

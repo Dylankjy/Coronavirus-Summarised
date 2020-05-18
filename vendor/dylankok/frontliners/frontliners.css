@@ -1,3 +1,4 @@
+/* Hero header */
 section.hero.homePage {
     background: url("/static/doctor.jpeg") no-repeat center;
     background-color: #000;
@@ -8,14 +9,7 @@ section.hero.homePage {
     transition: background ease-in-out .5s !important;
 }
 
-.has-background-success {
-    background-color: #29b486 !important;
-}
-
-.navbar-transparent {
-    background-color: transparent !important;
-}
-
+/* Hero title */
 section.hero.homePage .title {
     font-size: 6rem;
     color: white;
@@ -23,10 +17,12 @@ section.hero.homePage .title {
     text-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
 }
 
+/* Hero title (Heart shape FA) */
 section.hero.homePage .title-top {
     text-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
 }
 
+/* Hero subtitle */
 section.hero.homePage .subtitle {
     font-size: 2rem;
     color: white;
@@ -34,105 +30,12 @@ section.hero.homePage .subtitle {
     text-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
 }
 
-.box {
-    transition: ease .40s;
-    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+/* Section below hero */
+.has-background-success {
+    background-color: #29b486 !important;
 }
 
-/* Don't use box animation when on mobile */
-@media screen and (min-width: 769px) {
-    .box:hover {
-        transform: scale(1.035);
-        box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
-    }
-}
-
-.icon.icon-symptom {
-    border-radius: 99999px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 3rem;
-    margin-bottom: 1rem;
-    color: rgba(0, 0, 0, .8);
-}
-
-.icon.icon-symptom-small {
-    border-radius: 99999px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.icon.icon-symptom-small.black {
-    border-radius: 99999px;
-    background: rgba(190, 0, 0, 0.8);
-    padding: 2.25rem;
-    margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.section-link-arrow-right {
-    text-shadow: 0 0px 20px rgba(0, 0, 0, 0.5);
-}
-
-.tool-arrow-right-move {
-    animation: move-right 1.25s ease-in-out infinite;
-}
-
-#tool {
-    transition: ease .40s;
-}
-
-#tool:hover {
-    background-color: #0096ad !important;
-}
-
-.fa-hero {
-    font-size: 4rem;
-}
-
-@keyframes move-right {
-    0% {
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-        transform: translateX(-20px)
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateX(0px)
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@media screen and (max-width: 769px) {
-    section.hero.homePage .title {
-        font-size: 3rem;
-    }
-
-    section.hero.homePage .subtitle {
-        font-size: 1.25rem;
-    }
-
-    .hero-body {
-        padding: 6rem 1.5rem;
-    }
-
-    section.hero.homePage {
-        background-size: 70rem;
-    }
-
-    .fa-hero {
-        font-size: 3rem;
-    }
-}
-
+/* Easter Egg: Emoji change color transition */
 #smiley {
     transition: color ease .2s;
 }
@@ -168,4 +71,27 @@ section.hero.homePage .subtitle {
 
 .preload-8 {
     background: url("/static/frontliners/hero-8.jpg") no-repeat !important;
+}
+
+/* Responsive Classes for phones */
+@media screen and (max-width: 769px) {
+    section.hero.homePage .title {
+        font-size: 3rem;
+    }
+
+    section.hero.homePage .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-body {
+        padding: 6rem 1.5rem;
+    }
+
+    section.hero.homePage {
+        background-size: 70rem;
+    }
+
+    .fa-hero {
+        font-size: 3rem;
+    }
 }
