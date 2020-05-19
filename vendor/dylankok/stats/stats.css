@@ -1,6 +1,6 @@
 /* Flag icons */
 .flag-icon {
-    border: rgb(37, 56, 88) 1px solid;
+    border: #f4f5f7 2px solid;
     border-radius: 2px;
     background-size: cover !important;
     width: 1.56em !important;
