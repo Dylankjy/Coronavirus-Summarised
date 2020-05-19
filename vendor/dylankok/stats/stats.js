@@ -38,13 +38,39 @@ for (i = 0; i < listOfCountries.length; i++) {
     })
 }
 
-// Get data for chart
-$.getJSON("https://api.covid19api.com/world", function (data) {
-    renderChart(data)
+// Chart ID & variable (Global)
+var ctx = $("#globalChart");
+var globalChart
+
+// Get data for chart when country is selected
+$("#select-country").change(function () {
+    try {
+        globalChart.destroy()
+        initaliseChart($("#select-country").val())
+    } catch {
+        initaliseChart($("#select-country").val())
+    }
 });
 
+function initaliseChart(countryCode) {
+    $.getJSON("https://api.covid19api.com/total/country/" + countryCode, function (data) {
+        try {
+            $("#chart-country").text(data[0].Country)
+            renderChart(data, countryCode)
+        } catch (TypeError) {
+            $('#nodataWarning').show()
+        }
+    });
+}
+
 // Set data in chart
-function renderChart(data) {
+function renderChart(data, countryCode) {
+    // Hide any previous errors
+    $('#nodataWarning').hide()
+
+    // Set flag 
+    $("#chart-country-flag").attr("class", `flag-icon flag-icon-` + countryCode.toLowerCase());
+
     //  Variables
     var confirmedCases = []
     var deaths = []
@@ -52,21 +78,18 @@ function renderChart(data) {
     var dating = []
 
     // Assign data for past 7 days into arrays
-    for (i = 1; i < 8; i++) {
-        confirmedCases.push(data[data.length - i].TotalConfirmed)
-        deaths.push(data[data.length - i].TotalDeaths)
-        recovered.push(data[data.length - i].TotalRecovered)
+    for (i = 1; i < 62; i++) {
+        confirmedCases.push(data[data.length - i].Confirmed)
+        deaths.push(data[data.length - i].Deaths)
+        recovered.push(data[data.length - i].Recovered)
 
         // Use Moment.js: Get dates
         dating.push(moment().subtract(i, 'days').calendar('DD/MM/YYYY'))
     }
 
-    // Select canvas with ID of #globalChart
-    var ctx = $("#globalChart");
-
     // Render chart
-    Chart.defaults.global.defaultFontFamily	= 'Source Sans Pro';
-    var globalChart = new Chart(ctx, {
+    Chart.defaults.global.defaultFontFamily = 'Source Sans Pro';
+    globalChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: dating.reverse(),
@@ -88,16 +111,9 @@ function renderChart(data) {
                     backgroundColor: 'rgba(37, 56, 88, .5)'
                 }
             ]
-        },
-        options: {
-            defaultFontFamily: '"Source Sans Pro", sans-serif',
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            },
         }
     });
 }
+
+// Fire initialiseChart() function on page load
+// initaliseChart();
