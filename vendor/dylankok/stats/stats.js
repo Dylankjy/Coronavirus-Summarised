@@ -67,6 +67,7 @@ function initaliseChart(countryCode) {
                 renderChart(data, countryCode)
             } catch (TypeError) {
                 $("#chart-country").text("...")
+                $("#chart-country-flag").attr("class", '');
                 $('#nodataWarning').show()
             }
         }
