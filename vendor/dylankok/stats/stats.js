@@ -89,6 +89,7 @@ function renderChart(data, countryCode) {
 
     // Render chart
     Chart.defaults.global.defaultFontFamily = 'Source Sans Pro';
+    Chart.defaults.global.defaultFontSize = 16;
     globalChart = new Chart(ctx, {
         type: 'line',
         data: {
