@@ -53,14 +53,23 @@ $("#select-country").change(function () {
 });
 
 function initaliseChart(countryCode) {
-    $.getJSON("https://api.covid19api.com/total/country/" + countryCode, function (data) {
-        try {
-            $("#chart-country").text(data[0].Country)
-            renderChart(data, countryCode)
-        } catch (TypeError) {
+    $.ajax({
+        url: "https://api.covid19api.com/total/country/" + countryCode,
+        dataType: 'json',
+        async: false,
+        type: "GET",
+        error: function () {
             $('#nodataWarning').show()
+        },
+        success: function (data) {
+            try {
+                $("#chart-country").text(data[0].Country)
+                renderChart(data, countryCode)
+            } catch (TypeError) {
+                $('#nodataWarning').show()
+            }
         }
-    });
+    })
 }
 
 // Set data in chart
