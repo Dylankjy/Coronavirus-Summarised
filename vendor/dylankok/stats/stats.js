@@ -66,6 +66,7 @@ function initaliseChart(countryCode) {
                 $("#chart-country").text(data[0].Country)
                 renderChart(data, countryCode)
             } catch (TypeError) {
+                $("#chart-country").text("...")
                 $('#nodataWarning').show()
             }
         }
