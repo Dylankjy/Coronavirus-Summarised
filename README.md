@@ -35,7 +35,7 @@ Requirements
 
 2. The page just breaks. There's no formatting! Help!
 
-   Here's some tissues 🧻 *for your issues*. *You have issues*. No, seriously, you have issues. 
+   Here, have some tissues 🧻 *for your issues*. No, seriously, you have issues. 
    **USE A WEBSERVER! or change everything to relative path by yourself!**
 
 *Hello, if you use relative paths, just know, its bad practice. Especially on webservers. (I guess its okay for local .html)*
