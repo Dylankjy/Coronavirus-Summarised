@@ -1,5 +1,5 @@
 // Navbar Fading
-$(window).scroll(function (event) {
+$(window).scroll((event) => {
     var scroll = $(window).scrollTop();
     if (scroll === 0) {
         $("#navbar").addClass("navbar-transparent");
@@ -11,7 +11,7 @@ $(window).scroll(function (event) {
 });
 
 // Get data for navbar + data for section below hero
-$.getJSON("https://api.covid19api.com/world/total", function(data) {
+$.getJSON("https://api.covid19api.com/world/total", (data) => {
   $( "#numberOfCases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
   $( "#dead" ).text(parseFloat(data.TotalDeaths).toLocaleString("eng"));
   $( "#active-cases" ).text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
@@ -19,15 +19,15 @@ $.getJSON("https://api.covid19api.com/world/total", function(data) {
 });
 
 // Detect for hover of section "#tool" to move arrow "#tool-arrow-right"
-$('#tool').hover(function(){
+$('#tool').hover(() => {
     $("#tool-arrow-right").addClass("tool-arrow-right-move");
-}, function(){
+}, () => {
     $("#tool-arrow-right").removeClass("tool-arrow-right-move");
 })
 
 // Detect for hover of section "#frontliners" to move arrow "#tool-arrow-right2"
-$('#frontliners').hover(function(){
+$('#frontliners').hover(() => {
     $("#tool-arrow-right2").addClass("tool-arrow-right-move");
-}, function(){
+}, () =>{
     $("#tool-arrow-right2").removeClass("tool-arrow-right-move");
 })

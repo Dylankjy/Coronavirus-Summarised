@@ -1,5 +1,5 @@
 // Navbar Fading
-$(window).scroll(function (event) {
+$(window).scroll((event) => {
   var scroll = $(window).scrollTop();
   if (scroll === 0) {
     $("#navbar").addClass("navbar-transparent");
@@ -11,12 +11,12 @@ $(window).scroll(function (event) {
 });
 
 // Get data for navbar
-$.getJSON("https://api.covid19api.com/world/total", function (data) {
+$.getJSON("https://api.covid19api.com/world/total", (data) => {
   $("#numberOfCases").text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
 });
 
 // Submit form function
-$("#symtoms-form").submit(function (e) {
+$("#symtoms-form").submit((e) => {
   var counter = 0
   e.preventDefault();
 
@@ -66,8 +66,6 @@ $("#symtoms-form").submit(function (e) {
     counter = counter + 2
   }
 
-  console.log(counter)
-
   // Show results based on score
   if (counter === 0) {
     $("#form").hide();
@@ -87,7 +85,7 @@ $("#symtoms-form").submit(function (e) {
 
 
 // Retry function
-function retryForm(section) {
+retryForm = (section) => {
   window.scrollTo(0, 0);
   $(section).hide();
   $("#form").show();

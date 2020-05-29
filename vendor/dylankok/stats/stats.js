@@ -1,5 +1,5 @@
 // Navbar Fading
-$(window).scroll(function (event) {
+$(window).scroll((event) => {
     var scroll = $(window).scrollTop();
     if (scroll === 0) {
         $("#navbar").addClass("navbar-transparent");
@@ -11,7 +11,7 @@ $(window).scroll(function (event) {
 });
 
 // Get data for navbar + worldwide data on table
-$.getJSON("https://api.covid19api.com/world/total", function (data) {
+$.getJSON("https://api.covid19api.com/world/total", (data) => {
     $("#numberOfCases").text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
     $("#world-active").text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
     $("#world-rec").text(parseFloat(data.TotalRecovered).toLocaleString("eng"));
@@ -29,7 +29,7 @@ for (i = 0; i < listOfCountries.length; i++) {
         async: false,
         type: "GET",
         // data: data,
-        success: function (data) {
+        success: (data) => {
             // Set data in HTML
             $("#" + listOfCountries[i] + "-active").text(parseFloat(data[data.length - 1].Confirmed).toLocaleString("eng"));
             $("#" + listOfCountries[i] + "-rec").text(parseFloat(data[data.length - 1].Recovered).toLocaleString("eng"));
@@ -43,7 +43,7 @@ var ctx = $("#globalChart");
 var globalChart
 
 // Get data for chart when country is selected
-$("#select-country").change(function () {
+$("#select-country").change(() => {
     try {
         globalChart.destroy()
         initaliseChart($("#select-country").val())
@@ -52,16 +52,16 @@ $("#select-country").change(function () {
     }
 });
 
-function initaliseChart(countryCode) {
+initaliseChart = (countryCode) => {
     $.ajax({
         url: "https://api.covid19api.com/total/country/" + countryCode,
         dataType: 'json',
         async: false,
         type: "GET",
-        error: function () {
+        error: () => {
             $('#nodataWarning').show()
         },
-        success: function (data) {
+        success: (data) => {
             try {
                 $("#chart-country").text(data[0].Country)
                 renderChart(data, countryCode)
@@ -75,7 +75,7 @@ function initaliseChart(countryCode) {
 }
 
 // Set data in chart
-function renderChart(data, countryCode) {
+renderChart = (data, countryCode) => {
     // Hide any previous errors
     $('#nodataWarning').hide()
 
@@ -126,6 +126,3 @@ function renderChart(data, countryCode) {
         }
     });
 }
-
-// Fire initialiseChart() function on page load
-// initaliseChart();

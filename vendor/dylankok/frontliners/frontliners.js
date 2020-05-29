@@ -1,5 +1,5 @@
 // Navbar Fading
-$(window).scroll(function (event) {
+$(window).scroll((event) => {
   var scroll = $(window).scrollTop();
   if (scroll === 0) {
     $("#navbar").addClass("navbar-transparent");
@@ -9,7 +9,7 @@ $(window).scroll(function (event) {
 });
 
 // Get data for navbar + data for section below hero
-$.getJSON("https://api.covid19api.com/world/total", function (data) {
+$.getJSON("https://api.covid19api.com/world/total", (data) => {
   $("#numberOfCases").text(parseFloat(data.TotalConfirmed).toLocaleString("eng"));
   $("#saved").text(parseFloat(data.TotalRecovered).toLocaleString("eng"));
 });
@@ -27,7 +27,7 @@ setInterval(() => {
 }, 5000);
 
 // Easter egg: Change color of emoji
-$("#smiley").click(function () {
+$("#smiley").click(() => {
   $("#smiley").toggleClass("has-text-grey-light");
   $("#smiley").toggleClass("has-text-warning");
 });
