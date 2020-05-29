@@ -35,12 +35,12 @@ Requirements
 
 2. The page just breaks. There's no formatting! Help!
 
-   *You have issues*. You seriously have issues. 
+   Here's some tissues 🧻 *for your issues*. *You have issues*. No, seriously, you have issues. 
    **USE A WEBSERVER! or change everything to relative path.**
 
 *Hello, if you use relative paths, just know, its bad practice. Especially on webservers. (I guess its okay for local .html)*
 
-P.S. This is a joke, don't take it seriously.
+P.S. This is a joke, don't take it seriously. *But use a webserver*
 
 Feature List (For Tutor) - Not for Public Use.
 ---
@@ -53,6 +53,7 @@ Feature List (For Tutor) - Not for Public Use.
 > 4. **JQuery** used for 80%~ of all Javascript functions.
 > 5. **Navigation bar** changes colour when pages scroll.
 > 6. **Custom Bulma installation** (forked from hiyamashuX) used.
+> 7. **ES6/ECMAScript 2015** is used for all Javascript functions (if not, most).
 >
 > ```
 > .
