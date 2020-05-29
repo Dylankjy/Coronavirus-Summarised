@@ -5,7 +5,7 @@ This is a site I made for a school assignment submission.
 You may use the source code in adhereance to the license, provided [here](https://coronavirus-summarised.naka.to/copyright).
 Thank you.
 
-**-- Dylan Kok (Harukuni/@Kataharu)**
+**-- [Dylan Kok](https://kakumei.naka.to) (Harukuni/@Kataharu)**
 
 # コロナ、かいつまんでいた。
 このサイトは私の学校の宿題です。
@@ -13,7 +13,7 @@ Thank you.
 サイトのソースコードは誰が使えてもいいです。だって、利用規約がしたがってください。利用規約のページは[ここ](https://coronavirus-summarised.naka.to/copyright)です。
 ありがとうございます。
 
-**-- 春国（ハルクニ）**
+**-- [春国](https://kakumei.naka.to)（ハルクニ）**
 
 *すみません！下に情報は英語でだけ。*
 
