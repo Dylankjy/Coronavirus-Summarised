@@ -30,14 +30,17 @@ Requirements
 
 1. The numbers aren't working!
 
-   You are stupid, and I hate you. **Use a webserver for the love of this world.**
-   *Ever heard of CORS? Yeah. That's the reason why it doesn't work.*
+   [Stop it, get some help](https://www.youtube.com/watch?v=9Deg7VrpHbM). **Use a webserver for the love of this world.**
+   *Ever heard of [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)? Yeah. That's the reason why it doesn't work.*
 
 2. The page just breaks. There's no formatting! Help!
 
-   Again, you are stupid and I freaking hate you. **USE A WEBSERVER! or change everything to relative path.**
+   *You have issues*. You seriously have issues. 
+   **USE A WEBSERVER! or change everything to relative path.**
 
 *Hello, if you use relative paths, just know, its bad practice. Especially on webservers. (I guess its okay for local .html)*
+
+P.S. This is a joke, don't take it seriously.
 
 Feature List (For Tutor) - Not for Public Use.
 ---
