@@ -190,8 +190,9 @@ Feature List (For Tutor) - Not for Public Use.
 **Feedback - `feedback.html`** (Via Footer)
 
 > 1. **Netlify Form API** to handle form storage.
-> 2. **Zappier** to handle sending of Emails after submission.
-> 3. **Anti-bot spam** using Re-Captcha & Hidden Honey-pot Field
+> 2. **Email sent to email address** stated after submission of form (Zappier API).
+> 3. **Anti-bot spam** using Re-Captcha & Hidden Honey-pot Field.
+> 4. **Thank you page displayed** after submission.
 >
 > ```
 > /feedback.html
