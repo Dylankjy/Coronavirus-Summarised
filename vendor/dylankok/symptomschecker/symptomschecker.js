@@ -33,7 +33,7 @@ $("#symtoms-form").submit((e) => {
     counter = counter + 2
   }
   if ($("#difficultybreathing").prop("checked") == true) {
-    counter = counter + 2
+    counter = counter + 1
   }
   if ($("#fever").prop("checked") == true) {
     counter = counter + 2
@@ -74,7 +74,7 @@ $("#symtoms-form").submit((e) => {
   } else if (counter === 1) {
     $("#form").hide();
     $("#maybe").show("fade");
-  } else if (counter === 2) {
+  } else if (counter === 2 || counter === 3) {
     $("#form").hide();
     $("#high").show("fade");
   } else if (counter >= 4) {
